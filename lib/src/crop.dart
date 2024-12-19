@@ -1,4 +1,4 @@
-part of image_crop;
+part of images_crop;
 
 const _kCropGridColumnCount = 3;
 const _kCropGridRowCount = 3;
