@@ -60,7 +60,7 @@ class Crop extends StatefulWidget {
       context.findAncestorStateOfType<CropState>();
 }
 
-class CropState extends State<Crop> with TickerProviderStateMixin, Drag {
+class CropState extends State<Crop> with TickerProviderStateMixin {
   final _surfaceKey = GlobalKey();
 
   late final AnimationController _activeController;
@@ -762,7 +762,7 @@ class _CropPainter extends CustomPainter {
 
     final paint = Paint()
       ..isAntiAlias = false
-      ..color = _kCropGridColor.withOpacity(_kCropGridColor.opacity * active)
+      ..color = _kCropGridColor.withValues(alpha: _kCropGridColor.a * active)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0;
 
