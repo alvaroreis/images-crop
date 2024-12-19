@@ -1,4 +1,4 @@
-part of image_crop;
+part of images_crop;
 
 class ImageOptions {
   final int width;
@@ -9,7 +9,6 @@ class ImageOptions {
     required this.height,
   });
 
-  
   @override
   bool operator ==(other) =>
       other is ImageOptions && other.width == width && other.height == height;
